@@ -37,7 +37,7 @@ SUB: foreach my $sub ( @{ $ppi_or->find('PPI::Statement::Sub') || [] } ) {
     #  Ignore BEGIN etc.
     next if (ref($sub) eq 'PPI::Statement::Scheduled');
     #  Ignore subs with # no subsort pragra
-    foreach my $comment ( @{ $ppi_or->find('PPI::Token::Comment') || [] } ) {
+    foreach my $comment ( @{ $sub->find('PPI::Token::Comment') || [] } ) {
         next SUB if ($comment->content)=~/no\s+subsort/
     }
     unless ( $sub->forward ) {
