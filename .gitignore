@@ -1,0 +1,12 @@
+ChangeLog
+Changes
+Makefile
+Makefile.old
+MYMETA.json
+MYMETA.yml
+META.yml
+blib/*
+pm_to_blib
+*.bak
+*.old
+Local-Script-perltidy_subsort-*
