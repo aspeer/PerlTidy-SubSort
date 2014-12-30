@@ -17,6 +17,12 @@ use PPI;
 use PPI::Dumper;
 use Data::Dumper;
 
+
+#  Set version
+#
+$::VERSION='0.01';
+
+
 #  Get root document from command line
 #
 my $ppi_fn=$ARGV[0] || die "usage: $0 filename";
@@ -76,3 +82,15 @@ foreach my $i (0..$#sub_private_sort) {
 
 $ppi_or->save($ppi_fn);
 
+__END__
+
+=head LICENSE
+
+This software is copyright (c) 2014 by Andrew Speer <andrew.speer@isolutions.com.au>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+Full license text is available at:
+
+<http://dev.perl.org/licenses/>
