@@ -20,7 +20,7 @@ use Data::Dumper;
 
 #  Set version
 #
-$::VERSION='0.001';
+$::VERSION='0.002';
 
 
 #  Get root document from command line
