@@ -8,7 +8,7 @@ if ($mm_ver =~ /_/) { # dev version
 my %WriteMakefile=(
     NAME                => 'PerlTidy::SubSort',
     VERSION_FROM        => $::version_from_fn='lib/PerlTidy/SubSort.pm',
-    EXE_FILES           => [$::exe_fn='bin/perltidy_subsort.pl'],
+    EXE_FILES           => [$::exe_fn='bin/perltidy_subsort'],
     VERSION_FROM        => $::exe_fn,
     MAN3PODS            => {},
     LICENSE             => 'perl_5',
