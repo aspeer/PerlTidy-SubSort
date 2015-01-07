@@ -105,6 +105,10 @@ wdrender [OPTIONS] FILE
 
 
 
+__END__
+
+
+
 =head1 Name
 
 perltidy_subsort -- sort subroutines within a Perl file

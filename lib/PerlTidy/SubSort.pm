@@ -182,7 +182,7 @@ PPI
 
 The following methods are supplied by the module:
 
-subsort(fn)
+subsort(filename)
 
 Supply a file name for sorting. The file will be edited in place (no backup will be made). The method will return a scalar reference to the number of subroutines sorted.
 

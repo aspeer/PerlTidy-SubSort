@@ -62,7 +62,7 @@ make install</programlisting>
         </listitem>
       </itemizedlist></para>
 
-    <para> </para>
+    <para/>
   </section>
 
   <section>
@@ -80,7 +80,7 @@ print "sorted ${$count_sr} subroutines\n";</programlisting>
 
     <variablelist>
       <varlistentry>
-        <term><methodname>subsort(fn)</methodname></term>
+        <term><methodname>subsort(filename)</methodname></term>
 
         <listitem>
           <para>Supply a file name for sorting. The file will be edited in
@@ -96,20 +96,20 @@ print "sorted ${$count_sr} subroutines\n";</programlisting>
 
     <para>Subroutines starting with an underscore character (e.g. sub _foo {})
     are considered private. They are still sorted - but put after non-private
-    subroutines. </para>
+    subroutines.</para>
 
     <para>If you do not wish a subroutine sorted (moved) place the <code># no
     subsort</code> pragma anywhere in the subroutine code block to preserve
     the current location order: E.g. <programlisting>sub foo { # no subsort
     my $foo=1
-}</programlisting> </para>
+}</programlisting></para>
   </section>
 
   <section>
     <title>License</title>
 
     <para>This software is copyright (c) 2014 by Andrew Speer
-    &lt;<email>andrew.speer@isolutions.com.au</email>&gt;. </para>
+    &lt;<email>andrew.speer@isolutions.com.au</email>&gt;.</para>
 
     <para>This is free software; you can redistribute it and/or modify it
     under the same terms as the Perl 5 programming language system
