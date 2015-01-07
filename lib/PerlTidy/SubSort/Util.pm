@@ -1,6 +1,6 @@
 #  This file is part of PerlTidy::SubSort.
 #
-#  This software is copyright (c) 2014 by Andrew Speer <andrew.speer@isolutions.com.au>.
+#  This software is copyright (c) 2015 by Andrew Speer <andrew.speer@isolutions.com.au>.
 #
 #  This is free software; you can redistribute it and/or modify it under
 #  the same terms as the Perl 5 programming language system itself.
@@ -34,7 +34,7 @@ use base 'Exporter';
 #  Version information in a format suitable for CPAN etc. Must be
 #  all on one line
 #
-$VERSION='0.004';
+$VERSION='0.006';
 
 
 #  Done
