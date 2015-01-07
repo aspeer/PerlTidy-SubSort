@@ -8,9 +8,8 @@ if ($mm_ver =~ /_/) { # dev version
 my %WriteMakefile=(
     NAME                => 'PerlTidy::SubSort',
     VERSION_FROM        => $::version_from_fn='lib/PerlTidy/SubSort.pm',
-    EXE_FILES           => [$::exe_fn='bin/perltidy_subsort'],
-    VERSION_FROM        => $::exe_fn,
-    MAN3PODS            => {},
+    ABSTRACT_FROM       => $::version_from_fn,
+    EXE_FILES           => ['bin/perltidy_subsort'],
     LICENSE             => 'perl_5',
     AUTHOR              => 'Andrew Speer <andrew.speer@isolutions.com.au>',
     MIN_PERL_VERSION	=> '5.006',
