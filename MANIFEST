@@ -2,6 +2,7 @@ Makefile.PL
 MANIFEST
 README
 bin/perltidy_subsort
+bin/perltidy_subsort.xml
 lib/PerlTidy/SubSort.pm
 lib/PerlTidy/SubSort/Util.pm
 LICENSE                                  
