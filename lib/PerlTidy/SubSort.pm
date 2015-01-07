@@ -39,7 +39,7 @@ use PerlTidy::SubSort::Util;
 
 #  Version
 #
-$VERSION='0.012';
+$VERSION='0.013';
 
 
 #  Done
