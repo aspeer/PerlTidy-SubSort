@@ -1,9 +1,12 @@
 Makefile.PL
 MANIFEST
 README
+README.md
+README.pod
 bin/perltidy_subsort
 bin/perltidy_subsort.xml
 lib/PerlTidy/SubSort.pm
+lib/PerlTidy/SubSort.pm.xml
 lib/PerlTidy/SubSort/Util.pm
 t/00-load.t
 LICENSE                                  

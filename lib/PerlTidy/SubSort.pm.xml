@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>PerlTidy::SubSort</title>
+
+    <author>
+      <personname><firstname>Andrew</firstname><surname>Speer</surname></personname>
+
+      <affiliation>
+        <orgname>andrew.speer@isolutions.com.au</orgname>
+      </affiliation>
+    </author>
+
+    <pubdate>January 2015</pubdate>
+  </info>
+
+  <section>
+    <title>Name</title>
+
+    <para>PerlTidy::SubSort -- sort subroutines in your Perl files (.pl, .pm
+    etc.) into alphabetical order</para>
+  </section>
+
+  <section>
+    <title>Synopsis</title>
+
+    <para><command>perltidy_subsort &lt;filename&gt;</command></para>
+  </section>
+
+  <section>
+    <title>Overview</title>
+
+    <para>This module and associated script utility will sort subroutines in
+    your Perl files (.pl, .pm etc.) into alphabetical order.</para>
+  </section>
+
+  <section>
+    <title>Installation</title>
+
+    <para>As per standard Perl installation procedure</para>
+
+    <programlisting>perl Makefile.PL
+make
+make test
+make install</programlisting>
+  </section>
+
+  <section>
+    <title>Dependencies</title>
+
+    <para>This module requires the following CPAN modules:</para>
+
+    <para><itemizedlist>
+        <listitem>
+          <para>PPI</para>
+        </listitem>
+      </itemizedlist></para>
+
+    <para> </para>
+  </section>
+
+  <section>
+    <title>Usage</title>
+
+    <programlisting>#  From command line
+perltidy_subsort foo.pm
+
+#  In Perl code
+use PerlTidy::SubSort;
+my $count_sr=PerlTidy::SubSort-&gt;subsort('foo.pm');
+print "sorted ${$count_sr} subroutines\n";</programlisting>
+
+    <para>The following methods are supplied by the module:</para>
+
+    <variablelist>
+      <varlistentry>
+        <term><methodname>subsort(fn)</methodname></term>
+
+        <listitem>
+          <para>Supply a file name for sorting. The file will be edited in
+          place (no backup will be made). The method will return a scalar
+          reference to the number of subroutines sorted.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </section>
+
+  <section>
+    <title>Notes</title>
+
+    <para>Subroutines starting with an underscore character (e.g. sub _foo {})
+    are considered private. They are still sorted - but put after non-private
+    subroutines. </para>
+
+    <para>If you do not wish a subroutine sorted (moved) place the <code># no
+    subsort</code> pragma anywhere in the subroutine code block to preserve
+    the current location order: E.g. <programlisting>sub foo { # no subsort
+    my $foo=1
+}</programlisting> </para>
+  </section>
+
+  <section>
+    <title>License</title>
+
+    <para>This software is copyright (c) 2014 by Andrew Speer
+    &lt;<email>andrew.speer@isolutions.com.au</email>&gt;. </para>
+
+    <para>This is free software; you can redistribute it and/or modify it
+    under the same terms as the Perl 5 programming language system
+    itself.</para>
+
+    <para>Full license text is available at:</para>
+
+    <para>&lt;<link
+    xlink:href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</link>&gt;</para>
+  </section>
+</article>
