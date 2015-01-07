@@ -34,12 +34,12 @@ use FindBin qw($Script);
 
 #  Version Info, must be all one line for MakeMaker, CPAN.
 #
-$::VERSION='0.007';
+$::VERSION='0.008';
 
 
 #  Run main
 #
-exit ${ &main(\@ARGV) || die };
+exit ${&main(\@ARGV) || die};
 
 #===================================================================================================
 
@@ -59,7 +59,8 @@ sub main {
 
     #  Get command line options
     #
-    GetOptions(\%opt,
+    GetOptions(
+        \%opt,
         'help|?',
         'man',
         'version'
@@ -67,21 +68,21 @@ sub main {
     pod2usage(-verbose => 99, -sections => 'Synopsis|Options', -exitval => 1) if $opt{'help'};
     pod2usage(-verbose => 2) if $opt{'man'};
     $opt{'version'} && do {
-      print "$Script version: $::VERSION\n"; 
-      exit 0 
+        print "$Script version: $::VERSION\n";
+        exit 0
     };
-    
-    
+
+
     #  Run through files
     #
     foreach my $fn (@{$argv_ar}) {
-      msg("file $fn processing");
-      my $count_sr=subsort($fn) ||
-        return err("$Script: unable to subsort $fn");
-      msg("file $fn sorted %s subroutines", ${$count_sr});
+        msg("file $fn processing");
+        my $count_sr=subsort($fn) ||
+            return err ("$Script: unable to subsort $fn");
+        msg("file $fn sorted %s subroutines", ${$count_sr});
     }
-    
-    
+
+
     #  Done
     #
     return \0;
