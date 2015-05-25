@@ -1,4 +1,5 @@
 use 5.006;
+use strict;
 use ExtUtils::MakeMaker;
 my $mm_ver = $ExtUtils::MakeMaker::VERSION;
 if ($mm_ver =~ /_/) { # dev version
@@ -7,27 +8,34 @@ if ($mm_ver =~ /_/) { # dev version
 }
 my %WriteMakefile=(
     NAME                => 'PerlTidy::SubSort',
-    VERSION_FROM        => $::version_from_fn='lib/PerlTidy/SubSort.pm',
-    ABSTRACT_FROM       => $::version_from_fn,
-    EXE_FILES           => ['bin/perltidy_subsort'],
-    LICENSE             => 'perl_5',
+    VERSION_FROM        => 'lib/PerlTidy/SubSort.pm',
+    ABSTRACT_FROM       => 'lib/PerlTidy/SubSort.pm',,
+    EXE_FILES           => [],
+    LICENSE             => 'perl',
     AUTHOR              => 'Andrew Speer <andrew.speer@isolutions.com.au>',
     MIN_PERL_VERSION	=> '5.006',
+    PREREQ_PM           =>  {
+        'Test::Simple'  =>  0.44
+    },
     META_MERGE => { 
-        'meta-spec'         => {
-            version         => 2
+        'meta-spec'     => {
+            version     => 2
         },
-        resources           => {
-            homepage        => 'https://github.com/aspeer/PerlTidy-SubSort',
-            repository      => {
-                type        => 'git',
-                url         => 'https://github.com/aspeer/PerlTidy-SubSort.git',
-                web         => 'https://github.com/aspeer/PerlTidy-SubSort'
+        resources       => {
+            homepage    => 'https://github.com/aspeer/PerlTidy-SubSort',
+            repository  => {
+                type    => 'git',
+                url     => 'https://github.com/aspeer/PerlTidy-SubSort.git',
+                web     => 'https://github.com/aspeer/PerlTidy-SubSort'
             }
         }
     },
-    'depend'                            =>  {
-        Makefile                        =>  '$(VERSION_FROM)',
+    'depend'            => {
+        Makefile        => '$(VERSION_FROM)',
+    },
+    'dist'		=> {
+	COMPRESS        =>  'gzip -9f',
+	SUFFIX		=>  '.gz'
     },
 );
 my %MM_Compat=(
@@ -40,8 +48,7 @@ my %MM_Compat=(
 );
 while (my($mm_ver_test, $ar)=each %MM_Compat) {
     if (version->parse($mm_ver) < version->parse($mm_ver_test)) {
-        delete @WriteMakeFile{@{$ar}};
-        print 'delete'.Dumper($ar);
+        delete @WriteMakefile{@{$ar}};
     }
 }
 WriteMakefile(%WriteMakefile);

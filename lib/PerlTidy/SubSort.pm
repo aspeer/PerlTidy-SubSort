@@ -69,13 +69,18 @@ sub subsort {
 
         #  Ignore BEGIN etc.
         next if (ref($sub) eq 'PPI::Statement::Scheduled');
+        
+        #  Ignore all UPPERCASE also. 
+        #
+        my $sub_name=$sub->name();
+        next if (uc($sub_name) eq $sub_name);
 
         #  Ignore subs with # no subsort pragra
         foreach my $comment (@{$sub->find('PPI::Token::Comment') || []}) {
             next SUB if ($comment->content)=~/no\s+subsort/
         }
         unless ($sub->forward) {
-            if ((my $sub_name=$sub->name)=~/^_/) {
+            if ($sub_name=~/^_/) {
                 push @sub_private, $sub;
                 $sub_private{$sub_name}=$sub;
             }
