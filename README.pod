@@ -1,3 +1,4 @@
+#
 #  This file is part of PerlTidy::SubSort.
 #
 #  This software is copyright (c) 2015 by Andrew Speer <andrew.speer@isolutions.com.au>.

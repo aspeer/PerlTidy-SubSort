@@ -1,5 +1,6 @@
 #!/usr/bin/env perl
 
+#
 #  This file is part of PerlTidy::SubSort.
 #
 #  This software is copyright (c) 2015 by Andrew Speer <andrew.speer@isolutions.com.au>.
@@ -69,8 +70,8 @@ sub subsort {
 
         #  Ignore BEGIN etc.
         next if (ref($sub) eq 'PPI::Statement::Scheduled');
-        
-        #  Ignore all UPPERCASE also. 
+
+        #  Ignore all UPPERCASE also.
         #
         my $sub_name=$sub->name();
         next if (uc($sub_name) eq $sub_name);
