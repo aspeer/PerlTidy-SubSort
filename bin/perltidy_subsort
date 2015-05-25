@@ -35,7 +35,7 @@ use FindBin qw($Script);
 
 #  Version Info, must be all one line for MakeMaker, CPAN.
 #
-$::VERSION='0.015';
+$::VERSION='0.016';
 
 
 #  Run main
