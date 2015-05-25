@@ -68,13 +68,19 @@ sub subsort {
     my (%sub_private, @sub_private);
     SUB: foreach my $sub (@{$ppi_or->find('PPI::Statement::Sub') || []}) {
 
+
+        #  Debug
+        #
+        my $sub_name=$sub->name();
+        debug("processing $sub_name");
+
         #  Ignore BEGIN etc.
         next if (ref($sub) eq 'PPI::Statement::Scheduled');
 
         #  Ignore all UPPERCASE also.
         #
-        my $sub_name=$sub->name();
         next if (uc($sub_name) eq $sub_name);
+        debug("subroutine $sub_name eligble for sort");
 
         #  Ignore subs with # no subsort pragra
         foreach my $comment (@{$sub->find('PPI::Token::Comment') || []}) {
@@ -82,13 +88,18 @@ sub subsort {
         }
         unless ($sub->forward) {
             if ($sub_name=~/^_/) {
+                debug('push onto sub_private');
                 push @sub_private, $sub;
                 $sub_private{$sub_name}=$sub;
             }
             else {
+                debug('push onto sub_public');
                 push @sub_public, $sub;
                 $sub_public{$sub_name}=$sub;
             }
+        }
+        else {
+            debug("sub->forward, not processing");
         }
     }
 

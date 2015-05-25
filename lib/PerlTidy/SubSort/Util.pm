@@ -29,7 +29,7 @@ use Carp;
 #  Export functions
 #
 use base 'Exporter';
-@EXPORT=qw(err msg arg);
+@EXPORT=qw(err msg arg debug);
 
 
 #  Version information in a format suitable for CPAN etc. Must be
@@ -43,6 +43,16 @@ $VERSION='0.015';
 1;
 
 #==================================================================================================
+
+
+sub debug {
+
+
+    #  Debug
+    #
+    goto &msg if $ENV{PERLTIDY_SUBSORT_DEBUG}
+
+}
 
 
 sub err {
@@ -81,4 +91,3 @@ sub msg {
     CORE::print &fmt(@_), "\n";
 
 }
-

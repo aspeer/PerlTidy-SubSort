@@ -10,7 +10,9 @@ my %WriteMakefile=(
     NAME                => 'PerlTidy::SubSort',
     VERSION_FROM        => 'lib/PerlTidy/SubSort.pm',
     ABSTRACT_FROM       => 'lib/PerlTidy/SubSort.pm',,
-    EXE_FILES           => [],
+    EXE_FILES           => [
+        'bin/perltidy_subsort'
+    ],
     LICENSE             => 'perl',
     AUTHOR              => 'Andrew Speer <andrew.speer@isolutions.com.au>',
     MIN_PERL_VERSION	=> '5.006',

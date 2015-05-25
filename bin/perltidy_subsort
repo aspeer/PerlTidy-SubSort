@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 
+#
 #  This file is part of PerlTidy::SubSort.
 #
 #  This software is copyright (c) 2015 by Andrew Speer <andrew.speer@isolutions.com.au>.
@@ -89,25 +90,7 @@ sub main {
 
 }
 
-__END__wdrender
-1
-wdrender
-parse and render WebDyne pages
-wdrender [OPTIONS] FILE
-
-
-wdrender
-1
-wdrender
-parse and render WebDyne pages
-wdrender [OPTIONS] FILE
-
-
-
-
 __END__
-
-
 
 =head1 Name
 
