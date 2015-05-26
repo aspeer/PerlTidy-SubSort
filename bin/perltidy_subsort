@@ -127,10 +127,15 @@ This script is a wrapper around the PerlTidy::SubSort module and is provided for
 PerlTidy::SubSort
 
 
-=head1 License and Copyright
+=head1 LICENSE and COPYRIGHT
 
-This software is copyright (c) 2014 by Andrew Speer <>.
+This file is part of PerlTidy::SubSort.
 
-This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.
+This software is copyright (c) 2015 by Andrew Speer <andrew.speer@isolutions.com.au>.
 
-Full license text is available at: L<http://dev.perl.org/licenses/>
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+Full license text is available at:
+L<http://dev.perl.org/licenses/>
+
