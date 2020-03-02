@@ -106,18 +106,17 @@ print "sorted ${$count_sr} subroutines\n";</programlisting>
   </section>
 
   <section>
-    <title>License</title>
+<title>LICENSE and COPYRIGHT</title>
 
-    <para>This software is copyright (c) 2014 by Andrew Speer
-    &lt;<email>andrew.speer@isolutions.com.au</email>&gt;.</para>
+<para>This file is part of PerlTidy::SubSort.</para>
 
-    <para>This is free software; you can redistribute it and/or modify it
-    under the same terms as the Perl 5 programming language system
-    itself.</para>
+<para>This software is copyright (c) 2015 by Andrew Speer &lt;andrew.speer@isolutions.com.au&gt;.</para>
 
-    <para>Full license text is available at:</para>
+<para>This is free software; you can redistribute it and/or modify it underthe same terms as the Perl 5 programming language system itself.</para>
 
-    <para>&lt;<link
-    xlink:href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</link>&gt;</para>
+<para>Full license text is available at:</para>
+
+<para>&lt;http://dev.perl.org/licenses/&gt;
+
   </section>
 </article>

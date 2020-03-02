@@ -3,7 +3,6 @@ MANIFEST
 MANIFEST.SKIP
 README
 README.md
-README.pod
 bin/perltidy_subsort
 bin/perltidy_subsort.xml
 lib/PerlTidy/SubSort.pm
