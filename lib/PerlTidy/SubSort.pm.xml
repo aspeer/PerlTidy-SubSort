@@ -100,23 +100,23 @@ print "sorted ${$count_sr} subroutines\n";</programlisting>
 
     <para>If you do not wish a subroutine sorted (moved) place the <code># no
     subsort</code> pragma anywhere in the subroutine code block to preserve
-    the current location order: E.g. <programlisting>sub foo { # no subsort
-    my $foo=1
-}</programlisting></para>
+    the current location order: E.g. <programlisting>sub foo { # no subsort my $foo=1 }</programlisting></para>
   </section>
 
   <section>
-<title>LICENSE and COPYRIGHT</title>
+    <title>LICENSE and COPYRIGHT</title>
 
-<para>This file is part of PerlTidy::SubSort.</para>
+    <para>This file is part of PerlTidy::SubSort.</para>
 
-<para>This software is copyright (c) 2015 by Andrew Speer &lt;andrew.speer@isolutions.com.au&gt;.</para>
+    <para>This software is copyright (c) 2020 by Andrew Speer
+    &lt;andrew.speer@isolutions.com.au&gt;.</para>
 
-<para>This is free software; you can redistribute it and/or modify it underthe same terms as the Perl 5 programming language system itself.</para>
+    <para>This is free software; you can redistribute it and/or modify it
+    under the same terms as the Perl 5 programming language system
+    itself.</para>
 
-<para>Full license text is available at:</para>
+    <para>Full license text is available at:</para>
 
-<para>&lt;http://dev.perl.org/licenses/&gt;
-
+    <para>&lt;http://dev.perl.org/licenses/&gt;</para>
   </section>
 </article>
