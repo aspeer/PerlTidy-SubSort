@@ -35,7 +35,7 @@ use base 'Exporter';
 #  Version information in a format suitable for CPAN etc. Must be
 #  all on one line
 #
-$VERSION='0.016';
+$VERSION='0.017';
 
 
 #  Done
